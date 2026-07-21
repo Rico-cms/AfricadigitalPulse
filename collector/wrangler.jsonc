@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "africa-digital-pulse-collector",
+  "main": "worker.js",
+  "compatibility_date": "2026-07-21",
+  "triggers": { "crons": ["0 6,14 * * *"] },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "africa-digital-pulse",
+    "database_id": "04fd1bad-5794-4368-a69c-8b6a230e8e77"
+  }]
+}
