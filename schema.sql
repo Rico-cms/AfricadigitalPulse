@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS signals (
   summary TEXT,
   published_at TEXT,
   collected_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  last_seen_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
   country TEXT,
   sector TEXT,
   status TEXT NOT NULL DEFAULT 'new' CHECK(status IN ('new','qualified','rejected','used'))
